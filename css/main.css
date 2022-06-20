@@ -103,7 +103,7 @@ html, body {
 }
 /* ------------------HERO ------------------------------- */
 #hero {
-    background-image: url("img/Ht.png");
+    background-image: url("https://zenithmotorsport.github.io/img/Ht.png");
     width: 100vw;
     min-height: 100vh;
     background-position: 25% 10%; /* Center the image */
