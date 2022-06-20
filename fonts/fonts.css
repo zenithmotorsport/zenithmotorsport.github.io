@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'Coco Gothic Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Coco Gothic Regular'), url('Coco-Gothic-Regular-trial.woff') format('woff');
+}
+@font-face {
+    font-family: 'Coco Gothic Heavy';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Coco Gothic Heavy'), url('Coco-Gothic-Heavy-trial.woff') format('woff');
+}
+@font-face {
+    font-family: 'Coco Gothic Light';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Coco Gothic Light'), url('Coco-Gothic-Light-trial.woff') format('woff');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Economica&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,600;0,700;1,500&display=swap');

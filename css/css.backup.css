@@ -1,0 +1,422 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    color:rgb(254,255,254);
+    background-color: #0a0d0f;
+    height: max-content;
+    overflow-x: hidden;
+}
+#hero {
+    background-image: url("D:/zenith/web/img/Ht.png");
+    width: 100vw;
+    min-height: 100vh;
+    background-position: 25% 10%; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+#hero::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    /* background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 98%); */
+    background-color: rgba(0, 0, 0, 0.2);
+}
+#topNav {
+    display:flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
+    padding-right: 20px;
+    background-color: transparent;
+    text-transform: uppercase;
+}
+.topNavBtn {
+    height: 100%;
+    margin: 0px 30px;
+    padding: 0px 8px;
+    transition: color .5s ease, background-color 0.25s ease;
+    font-family:'Coco Gothic Regular';
+}
+.topNavBtn a {
+    position: relative;
+    top:60%;
+    color: rgba(255, 255, 255, 0.829);
+    text-decoration: none;
+}
+.topNavBtn a:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+.topNavBtn a:hover:after {
+    width: 100%;
+    background: rgb(162,0,18);
+}
+/* .topNavBtn a:hover {
+    color: rgb(230, 210, 32);
+} */
+#sponsorBtn {
+    background-color: #a30013;
+    /* transition: background-color 1s ease; */
+}
+#sponsorBtn:hover {
+    background-color: white;
+}
+#sponsorBtn a:hover {
+    color: rgb(162,0,18);
+}
+#logo {
+    position: absolute;
+    /* top: 5px;
+    left: 5px; */
+    width: 100px;
+    mix-blend-mode: screen;
+    margin-right: auto;
+    margin-left: 10px;
+}
+
+/* Menu icon */
+.menu_icon {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 999;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(224, 224, 224);
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 10%;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* ---------------------------- ABOUT US ----------------------- */
+
+.redcon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 140%;
+    z-index: 1;
+    background-color: transparent;
+    overflow-y: visible;
+    padding-top: 26%;
+}
+.redcon .rcon {
+    width: 80%;
+}
+.redcon::before {
+    content: "";
+    position: absolute;
+    top:26%;
+    left: -30%;
+    height: 100%;
+    width: 200%;
+    background-color: rgb(162,0,18);
+    z-index: -1;
+    transform: rotate(7deg);
+}
+.redcon::after {
+    content: "";
+    position: absolute;
+    top:26%;
+    left: -30%;
+    height: 100%;
+    width: 200%;
+    background-color: rgb(162,0,18);
+    z-index: -1;
+    transform: rotate(-7deg);
+}
+.redcon .btn {
+    padding: 10px 16px 8px 16px;
+    background-color: white;
+    color: #131516;
+    font-family: 'Coco Gothic Heavy';
+    width: max-content;
+    z-index: 10;
+    transition: all 0.25s ease;
+    cursor:pointer;
+    margin:10px 0px;
+    /* display: inline-block; */
+}
+.redcon .btn:hover {
+    background-color: #131516;
+    color: white;
+}
+.blackcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+    background-color: transparent;
+    padding-top: 30%;
+}
+.blackcon .bcon {
+    width: 80%;
+    margin-bottom: 10%;
+}
+.blackcon .btn {
+    padding: 10px 16px 8px 16px;
+    background-color: rgb(162,0,18);
+    color: white;
+    font-family: 'Coco Gothic Heavy';
+    width: max-content;
+    z-index: 10;
+    transition: all 0.25s ease;
+    cursor:pointer;
+}
+.blackcon .btn:hover {
+    background-color: white;
+    color: rgb(162,0,18);
+}
+.aboutus, .sponsorus {
+    position: relative;
+    /* margin: 0 10%; */
+    height: min-content;
+}
+.aboutus p, .sponsorus p, .contactus p {
+    width: 30%;
+    text-align: justify;
+    font-family: 'Coco Gothic Light';
+    z-index: 10;
+    line-height: 1.25em;
+}
+.aboutus img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    width: 50%;
+}
+
+/* ---------------------------- ABOUT US ----------------------- */
+.team {
+    width: 100%;
+    background-color: transparent;
+    min-height: 100vh;
+}
+.mem {
+    display: inline-block;
+    width: min-content;
+    margin: 10px 15px;
+    padding: 10px 0px;
+}
+
+/* ---------------------------- Slider Gallery ----------------------- */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider {
+    min-height: 80vh;
+    width: 70%;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.slider input {
+    visibility: hidden;
+}
+.slider .menu {
+    position: absolute;
+    left: 0;
+    z-index: 900;
+    width: 100%;
+    bottom: 0;
+}
+.slider .menu label {
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    margin: 0 0.2em 1em;
+}
+.slider .menu label:hover,
+.slider .menu label:focus {
+    background: #636363;
+}
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    padding: 8em 1em 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: left 0s 0.75s;
+}
+[id^="slide"]:checked + .slide {
+    left: 0;
+    z-index: 100;
+    transition: left 0.65s ease-out;
+}
+.slide-1 {
+    background-image: url("https://www.mercedesamgf1.com/en/news/2018/11/insight-the-trackside-engineers/_jcr_content/root/slider_0/sliderchilditems/slideritem_0/image/MQ7-0-image-20191104195822/e00slider.jpeg");
+}
+.slide-2 {
+    background-image: url("https://www.morson.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOCtzRWc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--bad48955e6a2e4976794c7617168d9ac6d2748a4/gustavo-campos-B87zMorEZRo-unsplash.jpg");
+}
+.slide-3 {
+    background-image: url("https://s19535.pcdn.co/wp-content/uploads/2014/06/Three-of-the-Infiniti-finalists-will-win-a-12-month-work-placement-with-Infiniti-Red-Bull-Racing.jpg");
+}
+.slide-4 {
+    background-image: url("https://www.sportscasting.com/wp-content/uploads/2021/04/Formula-1-Grand-Prix-of-Austria.jpg");
+}
+
+/* -------------------Sponsor US------------------- */
+
+.sponsorus img{
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    z-index: 1;
+    width: 30%;
+}
+
+/* ------------------- FOOTER ------------------------ */
+/* .whitecon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 140%;
+    z-index: 1;
+    background-color: transparent;
+    padding-top: 26%;
+    overflow: hidden;
+}
+.whitecon .wcon {
+    width: 80%;
+    z-index: 99;
+}
+.whitecon::before {
+    content: "";
+    position: absolute;
+    top:26%;
+    left: -30%;
+    height: 100%;
+    width: 200%;
+    background-color: rgb(238, 238, 238);
+    z-index: 11;
+    transform: rotate(7deg);
+}
+.whitecon::after {
+    content: "";
+    position: absolute;
+    top:26%;
+    left: -30%;
+    height: 100%;
+    width: 200%;
+    background-color: rgb(238, 238, 238);
+    z-index: 11;
+    transform: rotate(-7deg);
+}
+ */
+.footer {
+    background-color: rgb(162,0,18);
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 30px;
+    font-family:poppins;
+}
+/* ----------------------------- RESPONSIVE ---------------------------- */
+@media only screen and (min-width: 600px) {
+    /* for tabs */
+}
+  
+@media only screen and (min-width: 768px) {
+    .menu_icon {display: none;}
+/* For desktop: */
+    /* #topNav {
+        display:flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 70px;
+        padding-right: 20px;
+        background-color: transparent;
+        text-transform: uppercase;
+    }
+    .topNavBtn {
+        height: 100%;
+        margin: 0px 30px;
+        padding: 0px 8px;
+        transition: color .5s ease, background-color 0.25s ease;
+        font-family:'Coco Gothic Regular';
+    }
+    .topNavBtn a {
+        position: relative;
+        top:60%;
+        color: rgba(255, 255, 255, 0.829);
+        text-decoration: none;
+    }
+    .topNavBtn a:after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 3px;
+        width: 0px;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+    }
+    .topNavBtn a:hover:after {
+        width: 100%;
+        background: rgb(162,0,18);
+    }
+    #sponsorBtn {
+        background-color: #a30013;
+    }
+    #sponsorBtn:hover {
+        background-color: white;
+    }
+    #sponsorBtn a:hover {
+        color: rgb(162,0,18);
+    }
+    #topNav img {
+        height: 140%;
+        mix-blend-mode: screen;
+        margin-right: auto;
+        margin-left: 10px;
+    } */
+}

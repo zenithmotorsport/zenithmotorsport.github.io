@@ -1,5 +1,187 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith Motorspot</title>
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/main.js"></script>
+</head>
 <body>
-Test page by @abdxzi 
+    <div id="hero">
+        <!-- <img id="heroBack" src="img/hero.png"> -->
+        <div class="menu_icon" onclick="showMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <div class="center">
+          <img id="logo" src="img/logo.jpg" />
+        </div>
+        <div id="topNav">
+            <div class="topNavBtn" onclick="closeMenu()"><a href="#logo">Home</a></div>
+            <div class="topNavBtn" onclick="closeMenu()"><a href="#aboutus">About</a></div>
+            <div class="topNavBtn" onclick="closeMenu()"><a href="#achiv">Achievements</a></div>
+            <div class="topNavBtn" onclick="closeMenu()"><a href="#workshop">workshops</a></div>
+            <div class="topNavBtn" onclick="closeMenu()"><a href="#contactus">contact us</a></div>
+            <!-- <div class="topNavBtn" onclick="closeMenu()" id="sponsorBtn"><a href="">Sponsor Us</a></div> -->
+        </div>
+    </div>
+    <div class="redcon" id="aboutus">
+        <div class="rcon">
+            <div class="aboutus">
+                <h1>ABOUT US</h1>
+                <img src="img/abtcar.png" />
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>Zenith</strong> arose when a handful of normal students came together with stunning
+                  ideas to conquer the roaring engines and burning wheels on asphalt. Their
+                  dedication and hard work built a solid base subjected to evolve in the future.
+                  Now, we are one among the potential teams capable of building a car to
+                  gleam on the tracks of student formula races.</p><div class="btn">READ MORE</div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="blackcon achivcon">
+        <div class="bcon" id="achiv">
+          <h1>ACHIEVEMENTS</h1>
+          <div class="achiv_content">
+            <img src="img/abtcar.png" />
+            <div class="achiv_content_text">
+              <span class="air">AIR 22</span>
+              <span class="krank">2nd in kerala</span>
+              <span class="eve">In Formula Bharath Virtuals 2021-22</span>
+              <!-- <h3>ENGINEERING DESIGN - 19</h3>
+              <h3>BUSSINESS PRESENTATION - 29</h3> -->
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="redcon">
+      <div class="rcon" id="workshop">
+        <h1>WORKSHOPS</h1>
+        <div class="workcon">
+          <div class="workcon_content">
+            <h3>Z-talks</h3>
+            <img id="wimg1" src="D:/zenith/web/img/download.jpeg" />
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Z talks is a series of talk sessions aims to promote deeper understanding, uncover new technologies, and provide an idea of reinforcing existing practices. Recently we conducted a two-day talk session on "Electric vehicle and technology" and "CAE applications in Automotive Industry "hosted by B BALAJI, Technical Consultant and retired GM, Ashok Leyland, and KARTHIK SETHURAMAN, senior engineering manager, Valeo India Pvt.Ltd
+            </p>
+          </div>
+        </div>
+        <div class="workcon">
+          <div class="workcon_content">
+            <h3>Fusion 360 workshop</h3>
+            <img id="wimg2" src="https://scontent.fcok10-2.fna.fbcdn.net/v/t1.6435-9/197321816_2960221130923207_5796223938286433155_n.jpg?stp=cp0_dst-jpg_e15_fr_q65&_nc_cat=110&ccb=1-7&_nc_sid=110474&_nc_ohc=E7pliJOZJHYAX-LlilQ&_nc_ht=scontent.fcok10-2.fna&oh=00_AT8iZG1sQ2vsw-7icdYKs59xuzpYXjVm0W0h2swb4on0Fg&oe=62CF1498" />
+            <!-- <img id="wimg2" src="https://i.ytimg.com/vi/GWZsPcfjT0Q/maxresdefault.jpg" /> -->
+            <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;With this workshop, we set out to introduce ardent minds
+  to the potential and possibilities of modeling softwares.
+  Participants were trained and given 7 tasks with an ultimate one to
+  model Tesla Cyber Truck. The program was successful with over 300
+  participants from various colleges and was filled with utmost
+  enthusiasm and inventiveness.
+            </p>
+          </div>
+        </div>
+      </div>
+        <!--  -->
+    </div>
+    <div class="blackcon">
+      <div class="bcon">
+        <div class="sponsorus">
+          <h1>SPONSOR US</h1>
+          <div class="sponsorus_con">
+            <img src="img/sponsor.png" />
+            <div>
+              <p>Lorem ipsum dolor sit amet, consectetdc efwefw wlevervur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. </p>
+              <div class="btn">BE A SPONSOR</div>
+            </div>
+          </div>
+          </div>
+      </div>
+  </div>
+    <div class="redcon" id="contactus">
+      <div class="rcon">
+          <div class="contactus">
+              <h1>CONTACT US</h1>
+              <div class="contflex">
+                <div class="contactform">
+                  <form>
+                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="mail" placeholder="Email">
+                    <input type="text" name="subject" placeholder="Subject">
+                    <textarea name="msg" cols="30" rows="7" placeholder="Message"></textarea>
+                    <input id="submit" type="submit" value="Send Message" onclick="event.preventDefault();">
+                  </form>
+                </div>
+                
+                <div class="cdetails">
+                  <div><i style="font-size: 25px;" class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:zenithmotorsport@cet.ac.in">zenithmotorsport@cet.ac.in </a></div>
+                  <div><i style="font-size: 25px;" class="fa fa-facebook-official" aria-hidden="true"></i><a href="https://www.facebook.com/zenithmotorsportcet/">facebook/zenithmotorsportcet</a></div>
+                  <div><i style="font-size: 25px;" class="fa fa-instagram" aria-hidden="true"></i><a href="https://instagram.com/zenithmotorsportcet">@zenithmotorsportcet</a></div>
+                  <div><i style="font-size: 25px;" class="fa fa-linkedin" aria-hidden="true"></i><a href="https://www.linkedin.com/company/zenithmotorsportcet/">linkedin/zenithmotorsportcet</a></div>
+                  <div><i style="font-size: 25px;" class="fa fa-phone" aria-hidden="true"></i><a href="tel:+916238610724"><span class="callpos">Captain -</span>ANANTHU M B</a></div>
+                  <div><i style="font-size: 25px;" class="fa fa-phone" aria-hidden="true"></i><a href="tel:+916238610724"><span class="callpos">Manager -</span>PARVATHY</a></div>
+                  <!-- <div><i style="font-size: 25px;" class="fa fa-phone" aria-hidden="true"></i><a href="tel:+916238610724"><span class="callpos">Production Head -</span>KEERTHANA</a></div> -->
+                  
+                  
+                  
+                  <!-- <div class="contcall">
+                    <div class="calllogo"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="calldata">
+                      <span class="callpos">Captain</span>
+                      ANANTHU M : <a href="tel:+916238610724">+91 6238610724</a>
+                      <span class="callpos">Manager</span>
+                      PARVATHY : <a href="tel:+916238610724">+91 6238610724</a>
+                      <span class="callpos">Production Head</span>
+                      KARTHIKA : <a href="tel:+916238610724">+91 6238610724</a>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <!-- <div class="btn">READ MORE</div> -->
+          </div>
+      </div>
+    </div>
+    <div class="blackcon">
+      <div class="bcon" id="gallery">
+        <h1>GALLERY</h1>
+          <div class="gallery">
+              <div class="g-item g-item-1"></div>
+              <div class="g-item g-item-2"></div>
+              <div class="g-item g-item-3"></div>
+              <div class="g-item g-item-4"></div>
+              <div class="g-item g-item-5"></div>
+              <div class="g-item g-item-6"></div>
+          </div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      All rights Reserved © 2022
+    </div>
+  </div>
+
 </body>
 </html>
+
+
+<!-- <div class="bcon" id="team">
+            <h1 style="font-family:'Coco Gothic Heavy'">THE TEAM</h1>
+            <div class="team">
+                <div class="memcon">
+                    <div class="mem"><img src="img/l.png" /></div>
+                    <div class="mem"><img src="img/l.png" /></div>
+                    <div class="mem"><img src="img/l.png" /></div>
+                    <div class="mem"><img src="img/l.png" /></div>
+                    <div class="mem"><img src="img/l.png" /></div>
+                    <div class="mem"><img src="img/l.png" /></div>
+                </div>
+            </div>
+            <div class="btn">SEE OTHERS</div>
+        </div> -->

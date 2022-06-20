@@ -1,0 +1,629 @@
+* {
+    box-sizing: border-box;
+    user-select: none;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    color:rgb(254,255,254);
+    background-color: #0a0d0f;
+    height: max-content;
+    overflow-x: hidden;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* ------------------------ CONTAINERS ------------------------ */
+.redcon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 140%;
+    z-index: 1;
+    background-color: transparent;
+    overflow-y: visible;
+    padding-top: 26%;
+}
+.redcon .rcon {
+    width: 90%;
+}
+.redcon::before {
+    content: "";
+    position: absolute;
+    top:10%;
+    left: -30%;
+    height: 100%;
+    width: 200%;
+    background-color: rgb(162,0,18);
+    z-index: -1;
+    transform: rotate(7deg);
+}
+.redcon::after {
+    content: "";
+    position: absolute;
+    top:10%;
+    left: -30%;
+    height: 100%;
+    width: 200%;
+    background-color: rgb(162,0,18);
+    z-index: -1;
+    transform: rotate(-7deg);
+}
+.redcon .btn {
+    padding: 10px 14px 8px 14px;
+    background-color: white;
+    color: #131516;
+    /* font-family: 'Coco Gothic Heavy'; */
+    width: max-content;
+    z-index: 10;
+    transition: all 0.25s ease;
+    cursor:pointer;
+    margin:10px 16px; /* aboutus needs padding on mob 16px */
+    font-size: 12px;
+    letter-spacing: 1pt;
+    /* display: inline-block; */
+    font-weight: 800;
+}
+.redcon .btn:hover {
+    background-color: #131516;
+    color: white;
+}
+.blackcon {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    position: relative;
+    width: 100%;
+    /* min-height: 100vh; */
+    z-index: 1;
+    background-color: transparent;
+    padding-top: 30%;
+}
+.blackcon .bcon {
+    width: 92%;
+    margin-bottom: 10%;
+}
+.blackcon .btn {
+    padding: 10px 16px 8px 16px;
+    background-color: rgb(162,0,18);
+    color: white;
+    /* font-family: 'Coco Gothic Heavy'; */
+    width: max-content;
+    z-index: 10;
+    transition: all 0.25s ease;
+    cursor:pointer;
+    margin:10px 16px; /* aboutus needs padding on mob 16px */
+    font-weight: 800;
+}
+.blackcon .btn:hover {
+    background-color: white;
+    color: rgb(162,0,18);
+}
+/* ------------------HERO ------------------------------- */
+#hero {
+    background-image: url("D:/zenith/web/img/Ht.png");
+    width: 100vw;
+    min-height: 100vh;
+    background-position: 25% 10%; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+#hero::before {
+    content: "";
+    position: absolute;
+    top:0;
+    left:0;
+    height: 130%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+#topNav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-direction:column;
+    background-color: #000;
+    overflow: hidden;
+    padding-top: 100px;
+    text-align:center;
+    z-index: 9999;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+.topNavBtn {
+    margin-bottom: 20px;
+}
+.menu_active {
+    left: 20% !important;
+}
+.menu_active::after {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1 !important;
+}
+.topNavBtn a {
+    width: 100%;
+    /* height: 50px; */
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+.topNavBtn a:hover {
+    /* color: #f1f1f1; */
+    color: #f1f1f1;
+
+}
+#sponsorBtn {
+    font-weight: 700;
+}
+#sponsorBtn a:hover {
+    color: rgb(162,0,18);
+}
+#logo {
+    
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100px;
+    mix-blend-mode: screen;
+    margin-right: auto;
+    margin-left: 10px;
+    z-index: 999;
+}
+
+/* Menu icon */
+.menu_icon {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 99999;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: rgb(224, 224, 224);
+    margin: 6px 0;
+    transition: 0.4s;
+    border-radius: 10%;
+}
+
+.change {
+    position: fixed;
+    transform: scale(0.8);
+}
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+/* ---------------------------- ABOUT US ----------------------- */
+.aboutus, .sponsorus {
+    position: relative;
+    /* margin: 0 10%; */
+    height: min-content;
+}
+.aboutus p, .sponsorus p, .contactus p, #workshop p {
+    width: 95%;
+    text-align: justify;
+    font-weight: 300;
+    z-index: 10;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: 0.875em;
+    margin-left: auto;
+    margin-right: auto;
+}
+.aboutus img {
+    position: relative;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+    width: 90%;
+    margin: 40px 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------------------------- TEAM ----------------------- */
+.team {
+    width: 100%;
+    background-color: transparent;
+    min-height: 100vh;
+}
+.mem {
+    display: inline-block;
+    width: min-content;
+    margin: 10px 15px;
+    padding: 10px 0px;
+}
+/* ---------------------------- ACHIVEMENTS ----------------------- */
+
+#achiv h1:first-of-type {
+    text-align: right;
+    padding-right: 10px;
+    
+}
+#achiv img {
+    width: 80%;
+    margin: 50px 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#achiv .air {
+    color: rgb(236, 0, 28);
+}
+.air, .krank, #achiv .eve {
+    display: block;
+}
+.air {
+    font-size: 4em;
+    font-weight: 900;
+    display: block;
+}
+.krank {
+    font-size: 2em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+#achiv .eve {
+    color: rgba(250, 250, 250, 0.89);
+}
+/* ----------------workshops --------------------------------------- */
+#workshop {
+    margin-top: 18%;
+}
+#workshop p{
+    padding: 0px 10px;
+}
+
+#workshop img {
+    width: 90%;
+    margin: 50px 0px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* mix-blend-mode: screen; */
+}
+/* ---------------------------- Slider Gallery ----------------------- */
+  
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 5px;
+    grid-auto-rows: minmax(150px, auto);
+    grid-auto-flow: dense;
+    padding: 1px;
+}
+.g-item-1 {background:url("https://i.ytimg.com/vi/HLj1FU7qNGQ/maxresdefault.jpg");}
+.g-item-2 {background:url("https://cdn-1.motorsport.com/static/img/amp/5100000/5110000/5114000/5114200/5114220/s6_1002157/1002157.jpg");}
+.g-item-3 {background:url("https://www.team-bhp.com/forum/iipcache/61333.jpg");}
+.g-item-4 {background:url("https://images.hindustantimes.com/auto/img/2021/12/27/600x338/Britain-Grenfell-Mercedes-1_1640604120786_1640604128514.jpg");}
+.g-item-5 {background:url("https://www.formula1.com/content/dam/fom-website/manual/Misc/2020/InsidersGuides/development/GettyImages-1190000726.jpg");}
+.g-item-6 {background:url("https://images.hindustantimes.com/auto/img/2021/12/27/600x338/Britain-Grenfell-Mercedes-1_1640604120786_1640604128514.jpg");}
+.g-item {
+    padding: 1.5rem;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    background-color: #ccc;
+    border-radius: 0px;
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size:cover;
+    filter: grayscale(100%);
+}
+.g-item:hover {
+    filter: none;
+}
+.span-2 {
+    grid-column-end: span 2;
+    grid-row-end: span 2;
+}
+.span-3 {
+    grid-column-end: span 3;
+    grid-row-end: span 2;
+}
+#gallery h1 {
+    text-align: right;
+    padding-right: 10px;
+}
+/* ----------CONTACT ------------------- */
+.contactform {
+    color: #000;
+    border-radius: 2px;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    /* background-color: white; */
+}
+.contactform input, .contactform textarea {
+    border: 0;
+    outline: none;
+    display: block;
+    background-color: transparent;
+    border: 1px solid #ffe;
+    padding: 10px ;
+    margin: 10px 0px;
+    width: 100%;
+    color: white;
+    border-radius: 2px;
+    resize: vertical;
+}
+::placeholder {color: white;opacity: 0.6; } /* Chrome, Firefox, Opera, Safari 10.1+ */
+:-ms-input-placeholder {color: red;} /* Internet Explorer 10-11 */
+::-ms-input-placeholder {color: red;} /* Microsoft Edge */
+
+#submit {
+    background-color: white;
+    color: rgb(162,0,18);
+    font-weight: bold;
+}
+#submit:hover {
+    background-color: #131516;
+    color: white;
+    border: 0;
+}
+.cdetails {
+    margin-top: 30px;
+}
+.cdetails a{
+    text-decoration: none;
+    color: white;
+}
+.cdetails a:hover{
+    border-bottom: 1px dotted #fff;
+}
+.cdetails div {
+    display: flex;
+    align-items: center;
+    margin: 10px 0px;
+}
+.fa {
+    font-size: 60px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.callpos {
+    text-transform: uppercase;
+    margin: 0px 10px 0px 0px;
+}
+/* .contcall {
+    width: 100%;
+}
+.contcall div {
+    display: block;
+}
+.callpos {
+    display: block;
+    text-transform: uppercase;
+    margin: 20px 0px 10px 0px;
+    font-size: 1.17rem;
+    text-decoration: underline;
+}
+.callpos:first-of-type {
+    margin-top: 0px;
+}
+.calldata {
+    padding-left: 10px;
+    border-left: 3px solid #fff;
+} */
+/* -------------------Sponsor US------------------- */
+
+.sponsorus {
+    padding-top: 80px;
+}
+.sponsorus h1{
+    text-align: right;
+    padding-right: 10px;
+}
+.sponsorus img{
+    position: relative;
+    z-index: 1;
+    margin: 30px auto;
+    width: 70%;
+    display: block;
+}
+.footer {
+    background-color: rgb(162,0,18);
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 30px;
+    font-family:poppins;
+}
+/* ----------------------------- RESPONSIVE ---------------------------- */
+/* @media only screen and (min-width: 600px) {
+    /* for tabs */
+/* } */ 
+  
+@media only screen and (min-width: 945px) {
+    .redcon {
+        padding-top: 10%;
+        padding-bottom: 6%;
+        margin-top: 6%;
+    }
+    .redcon .btn {
+        margin: 29px 0px 10px 0px;
+    }
+    .menu_icon {display: none;}
+    #topNav {
+        position: relative;
+        left: 0%;
+        width: 100vw;
+        height: 70px;
+        flex-direction:row;
+        justify-content: flex-end;
+        padding-right: 20px;
+        background-color: transparent;
+        padding-top: 0;
+        z-index: 99;
+    }
+    .topNavBtn {
+        height: 100%;
+        margin: 0px 30px;
+        padding: 0px 8px;
+        transition: color .5s ease, background-color 0.25s ease;
+        /* font-family:'Coco Gothic Regular'; */
+    }
+    .topNavBtn a {
+        position: relative;
+        top:50%;
+        margin-bottom: 15px;
+        color: rgba(255, 255, 255, 0.829);
+        text-decoration: none;
+        font-size: 18px;
+    }
+    .topNavBtn a:after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 3px;
+        width: 0px;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+    }
+    .topNavBtn a:hover:after {
+        width: 100%;
+        background: rgb(162,0,18);
+    }
+    #hero {
+        margin-bottom: 16px;
+    }
+    .aboutus p, .sponsorus p, .contactus p, #workshop p {
+        margin: 0px;
+        font-size: 1em;
+        width: 40%;
+    }
+    .aboutus img {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        width: 50%;
+    }
+    #workshop {
+        margin-top: 4%;
+    }
+    .workcon {
+        margin: 30px 0px;
+        display: flex;
+        flex-direction: column;
+    }
+    #workshop p {
+        float: left;
+    }
+    #workshop img {
+        display: inline-block;
+        margin: 0;
+        position: relative;
+        left: 19%;
+    }
+    #wimg1 {
+        width: 20% !important;
+    }
+    #wimg2 {
+        width: 20% !important;
+    }
+    .sponsorus {
+        padding-top: 0;
+    }
+    .sponsorus img {
+        margin: 30px;
+        width: 30%;
+        display: inline-block;
+    }
+    .sponsorus .btn {
+        margin: 19px 0px;
+        margin-left: 120px;
+    }
+    .sponsorus_con {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin-left: 10%;
+    }
+    .sponsorus p {
+        width: 57%;
+        margin-left: 120px;
+    }
+    .sponsorus h1 {
+        padding-right: 11%;
+    }
+    .contflex{
+        display: flex;
+        flex-direction: row;
+        padding: 0 2%;
+    }
+    .contactform {
+        width: 50%;
+        margin: 0% 4%;
+    }
+    .achivcon {
+        padding-top: 16%;
+    }
+    #achiv {
+        margin-bottom: 2%;
+    }
+    #achiv img {
+        width: 40%;
+        margin-top: 7%;
+    }
+    .achiv_content {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 10%;
+    }
+    
+}
+
+@media (min-width:500px) and (max-width:945px) {
+    .aboutus img {
+        width: 70%;
+    }
+    .aboutus p {
+        width: 82%;
+    }
+    .aboutus .btn {
+        margin-left: 9% !important;
+    }
+    #achiv img {
+        width: 65%;
+    }
+    #workshop img {
+        width: 63%;
+    }
+    #workshop p {
+        padding: 0px 37px;
+    }
+}
